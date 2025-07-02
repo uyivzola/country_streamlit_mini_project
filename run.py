@@ -309,5 +309,5 @@ if not geo_match.empty:
 
     st_folium(folium_map, width=1920, height=600)
 else:
-    st.warning("🌐 Границы страны не найдены в GeoJSON.")
+    st.warning("🌐 Границы страны не найдены в GeoJSON. Sorry :)")
 
