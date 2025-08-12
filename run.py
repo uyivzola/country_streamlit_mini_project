@@ -87,7 +87,7 @@ card_titles = {
 }
 
 # Top navigation using tabs (appears at the top)
-tabs = st.tabs(["Dashboard", "Country Details", "Compare Countries"])
+tabs = st.tabs(["Compare Countries", "Country Details", "Dashboard"])
 
 # small header row with DM link
 st.markdown("[DM me on Telegram](https://t.me/Hopxol)")
