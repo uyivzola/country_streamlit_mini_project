@@ -179,7 +179,7 @@ with tabs[1]:
     df_sorted = df.sort_values(by='name_common')
     country_options = df_sorted[['name_common', 'cca3']].dropna()
 
-    default_country = 'Uzbekistan' if 'Uzbekistan' in country_options[
+    default_country = 'Netherlands' if 'Netherlands' in country_options[
         'name_common'].values else country_options['name_common'].iloc[0]
     selected_country_name = st.selectbox("Выберите страну", country_options['name_common'].tolist(),
                                          index=country_options['name_common'].tolist().index(default_country))
@@ -397,7 +397,7 @@ with tabs[0]:
     country_map = dict(zip(df_sorted['name_common'], df_sorted['cca3']))
     country_names = df_sorted['name_common'].tolist()
 
-    default = [c for c in ['Netherlands', 'Turkey',
+    default = [c for c in ['Netherlands', 'United Kingdom',
                            'Uzbekistan'] if c in country_names]
     if not default:
         default = country_names[:3]
