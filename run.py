@@ -398,7 +398,7 @@ with tabs[0]:
     country_names = df_sorted['name_common'].tolist()
 
     default = [c for c in ['Netherlands', 'United Kingdom',
-                           'Uzbekistan'] if c in country_names]
+                           'Germany'] if c in country_names]
     if not default:
         default = country_names[:3]
     selected_names = st.multiselect(
@@ -670,7 +670,7 @@ with tabs[0]:
         Draw(export=False).add_to(fmap)
         MiniMap(position='bottomright').add_to(fmap)
 
-        st_folium(fmap, width=1100, height=600)
+        st_folium(fmap, width="100%", height=600)
     else:
         st.warning('Геометрии для выбранных стран не найдены в GeoJSON.')
 
