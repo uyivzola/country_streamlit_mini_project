@@ -93,7 +93,7 @@ tabs = st.tabs(["Dashboard", "Country Details", "Compare Countries"])
 st.markdown("[DM me on Telegram](https://t.me/Hopxol)")
 
 # ---------------------------- Dashboard (original) ----------------------------
-with tabs[0]:
+with tabs[2]:
     st.title("📊 Дашборд по странам мира")
     st.markdown("""
     Этот дашборд использует данные из REST Countries API и визуализирует различные метрики:
@@ -174,8 +174,8 @@ with tabs[0]:
 
 # ---------------------------- Country Details (updated) ----------------------------
 with tabs[1]:
-    st.title("🌐 Детали по стране")
-
+    st.title("📊 Дашборд по странам мира | 🌐 Детали по стране")
+    
     df_sorted = df.sort_values(by='name_common')
     country_options = df_sorted[['name_common', 'cca3']].dropna()
 
@@ -389,8 +389,9 @@ with tabs[1]:
     st.markdown("with love 💘 by Behzod Khidirov.")
 
 # ---------------------------- Compare Countries (REDESIGN) ----------------------------
-with tabs[2]:
-    st.title("🔁 Compare Countries — Сравнение нескольких стран")
+with tabs[0]:
+    
+    st.title("🌐 Детали по стране: 🔁 Compare Countries — Сравнение нескольких стран")
     st.markdown(
         "Выберите несколько стран, и для каждой страны будут показаны те же карточки и графики, что и в деталях.")
 
