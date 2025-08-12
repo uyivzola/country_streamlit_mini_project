@@ -397,8 +397,8 @@ with tabs[0]:
     country_map = dict(zip(df_sorted['name_common'], df_sorted['cca3']))
     country_names = df_sorted['name_common'].tolist()
 
-    default = [c for c in ['Uzbekistan', 'Turkey',
-                           'Kazakhstan'] if c in country_names]
+    default = [c for c in ['Netherlands', 'Turkey',
+                           'Uzbekistan'] if c in country_names]
     if not default:
         default = country_names[:3]
     selected_names = st.multiselect(
