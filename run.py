@@ -217,9 +217,6 @@ with tabs[1]:
         st.markdown(
             f"**Регион:** {country.get('region', '—')} &nbsp;&nbsp;|&nbsp;&nbsp; **Субрегион:** {country.get('subregion', '—')}")
         st.markdown(
-                    f"**Столица:** {', '.join(country.get('capital', []))} &nbsp;&nbsp;|&nbsp;&nbsp; **Население:** {country['population']:,}")
-
-        st.markdown(
             f"**Площадь:** {int(country.get('area', 0)):,} км² &nbsp;&nbsp;|&nbsp;&nbsp; **Континент:** {', '.join(country.get('continents', []))}")
     with col2:
          st.image(country["flags"]["png"], caption="Флаг", width=350)
